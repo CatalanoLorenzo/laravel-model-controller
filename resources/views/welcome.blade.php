@@ -18,19 +18,19 @@
         <div class="row justify-content-center align-items-center g-2">
             <div class="col">
                 @forelse ($movies as $movie)
-                    <div class="card" style="width: ">
-                    
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">{{$movie->title}} </h5>
-                            <h6 class="card-subtitle   "> </h6>
-                            <p class="card-text"> </p>
-                            b5
+                            <h5 class="card-title">{{$movie->title}}</h5>
+                            <h6 class="card-subtitle">{{$movie->original_title}}</h6>
+                            <p class="card-text">{{$movie->nationality}}</p>
+                            <p class="card-text">{{$movie->date}}</p>
+                            <p class="card-text">{{$movie->vote}}</p>
                         </div>
                     </div>
+                    @empty
+                    <p>vuoto</p>
+                    @endforelse
             </div>
-            @empty
-            <p>vuoto</p>
-            @endforelse
 
         </div>
     </div>
